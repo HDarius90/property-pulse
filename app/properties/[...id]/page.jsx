@@ -8,6 +8,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 const PropertiesPage = async ({ params }) => {
   await connectDB();
   const property = await Property.findById(params.id).lean();
+  console.log(property);
 
   return (
     <>
