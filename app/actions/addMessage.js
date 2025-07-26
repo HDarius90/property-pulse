@@ -3,7 +3,7 @@ import connectDB from '@/config/database';
 import Message from '@/models/Message';
 import { getSessionUser } from '@/utils/getSessionUser';
 
-async function addMessage(formData) {
+async function addMessage(previousState, formData) {
   await connectDB();
 
   const sessionUser = await getSessionUser();
@@ -17,7 +17,7 @@ async function addMessage(formData) {
   const recipient = formData.get('recipient');
 
   if (userId === recipient) {
-    return new Error('You cant message yourself');
+    return { error: "You can't message yourself" };
   }
 
   const newMessage = new Message({
