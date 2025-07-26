@@ -42,7 +42,7 @@ const ShareButtons = ({ property }) => {
         <EmailShareButton
           url={shareUrl}
           subject={property.name}
-          body={`Checkout this property listing: ${shareUrl}`}
+          body={`Checkout this property listing:`}
         >
           <EmailIcon size={40} round={true} />
         </EmailShareButton>
