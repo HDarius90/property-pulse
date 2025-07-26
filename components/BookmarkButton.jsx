@@ -1,6 +1,6 @@
 'use client';
 import bookmarkProperty from '@/app/actions/bookmarkProperty';
-import { checkBookmarkStatus } from '@/app/actions/checkBookmarkStatus';
+import checkBookmarkStatus from '@/app/actions/checkBookmarkStatus';
 import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { FaBookmark } from 'react-icons/fa';
