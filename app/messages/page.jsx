@@ -1,3 +1,4 @@
+import MessageCard from '@/components/MessageCard';
 import connectDB from '@/config/database';
 import Message from '@/models/Message';
 import '@/models/Property';
@@ -40,7 +41,7 @@ const MessagesPage = async () => {
               <p>You have no messages</p>
             ) : (
               messages.map((message) => (
-                <h3 key={message.id}>{message.body}</h3>
+                <MessageCard key={message._id} message={message} />
               ))
             )}
           </div>
