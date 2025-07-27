@@ -16,8 +16,6 @@ async function markMessageAsRead(messageId) {
 
   const { userId } = sessionUser;
 
-  const user = await User.findById(userId);
-
   const message = await Message.findById(messageId);
 
   if (!message) {
